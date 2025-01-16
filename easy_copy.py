@@ -77,9 +77,10 @@ def move_selection(direction):
     treeview.selection_set(items[new_index])
     treeview.focus(items[new_index])
 
-
+script_dir = os.path.dirname(os.path.realpath(__file__))
+json_file_path = os.path.join(script_dir, 'data.json')
 # Load data from 'data.json' file
-data = load_data_from_json('data.json')
+data = load_data_from_json(json_file_path)
 
 # Create the main window
 root = tk.Tk()
